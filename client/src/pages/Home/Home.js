@@ -39,7 +39,7 @@ class App extends Component {
         this.vx = -.5 + Math.random();
         this.vy = -.5 + Math.random();
 
-        this.radius = Math.random() + 1.5;
+        this.radius = Math.random() + 1;
     }
 
     Dot.prototype = {
@@ -120,7 +120,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <canvas className='connecting-dots'>
         </canvas>
         {/* <div className="App">
