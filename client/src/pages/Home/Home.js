@@ -14,7 +14,7 @@ class App extends Component {
         colorDot = '#fff',
         color = '#fff';
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.height = window.innerHeight - 200;
         canvas.style.display = 'block';
         ctx.fillStyle = colorDot;
         ctx.lineWidth = .25;
@@ -120,25 +120,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
+        <div className="header">
         <canvas className='connecting-dots'>
         </canvas>
-        {/* <div className="App">
-          <header className="App-header">
-            <img src="" className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        </div> */}
+          <h1 className="header-title text-center">We build scientific tools using augmented reality</h1>
+        </div>
       </div>
     );
   }
