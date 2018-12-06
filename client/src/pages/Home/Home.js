@@ -1,20 +1,43 @@
 import React, { Component } from 'react';
+import Canvas from "../../components/Canvas";
+// import Navbar from "../../components/Navbar";
 import './Home.css';
-import Navbar from "../../components/Navbar";
 
 class App extends Component {
 
   state = {
-
+    EMAIL: '',
+    width: '',
+    height: '',
   };
 
-  canvasDots() {
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  updateCanvas = () => {
     var canvas = document.querySelector('canvas'),
         ctx = canvas.getContext('2d'),
         colorDot = '#fff',
         color = '#fff';
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight - 200;
+        canvas.height = window.innerHeight;
+        canvas.style.display = 'block';
+        ctx.fillStyle = colorDot;
+        ctx.lineWidth = .25;
+        ctx.strokeStyle = color;
+  }
+  
+  canvasDots = () => {
+    var canvas = document.querySelector('canvas'),
+        ctx = canvas.getContext('2d'),
+        colorDot = '#fff',
+        color = '#fff';
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         canvas.style.display = 'block';
         ctx.fillStyle = colorDot;
         ctx.lineWidth = .25;
@@ -26,7 +49,7 @@ class App extends Component {
     };
 
     var dots = {
-        nb: 90,
+        nb: ((window.innerWidth > 900) ? 90 : 20),
         distance: 90,
         d_radius: 100,
         array: []
@@ -111,21 +134,91 @@ class App extends Component {
     setInterval(createDots, 1000/30);
   };
 
+
+  updateDimensions = () => {
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight,      
+    })
+  }
+
+  componentWillMount = () => {
+    this.updateDimensions();
+  }
+
   componentDidMount() {
     this.canvasDots();
+    window.addEventListener("resize", this.updateCanvas);
   }
+  
+  componentWillUnmount = () => {
+    window.removeEventListener("resize", this.updateCanvas);
+  }  
 
 
   // Render Function
   render() {
+
     return (
       <div>
-        <Navbar />
         <div className="header">
-        <canvas className='connecting-dots'>
-        </canvas>
-          <h1 className="header-title text-center">We build scientific tools using augmented reality</h1>
+          <Canvas />
+          <div className="header-container text-center">
+            {/* <h1 className="header-title">look.<span className="header-title-ar">ar</span></h1> */}
+            {/* <h3 className="header-subtitle">We're turning augmented reality into a scientific tool</h3> */}
+
+            {/* <!-- Button trigger modal --> */}
+            {/* <button type="button" className="btn btn-look" data-toggle="modal" data-target="#mc-modal">
+              Sign up for updates
+            </button> */}
+          </div>
         </div>
+
+            {/* <!-- Modal --> */}
+            <div className="modal fade" id="mc-modal" tabIndex="-1" role="dialog">
+              <div className="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="exampleModalCenterTitle">Sign up for our mailing list</h5>
+                    <button type="button" className="close" data-dismiss="modal">
+                      <span>&times;</span>
+                    </button>
+                  </div>
+                  <div className="modal-body">
+                  <img className="message" src="/img/message.png" />
+                  {/* <!-- Begin Mailchimp Signup Form --> */}
+                  <div id="mc_embed_signup">
+                    <form action="https://app.us19.list-manage.com/subscribe/post?u=93f8f62161d6fac936d34784e&amp;id=0fc8d63267" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                      <div id="mc_embed_signup_scroll">
+                      <p style={{ fontSize: 14 }}>Enter your email address to get updates on the project</p>
+                        <div className="mc-field-group">
+                          <input type="email" defaultValue="" placeholder="Your Email" name="EMAIL" className="required email" id="mce-EMAIL"  onChange={this.handleInputChange} />
+                        </div>
+                        <div id="mce-responses" className="clear">
+                          <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
+                          <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
+                        </div>    
+                        {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
+                        <div style={{ position: "absolute", left: -5000 }}>
+                          <input type="text" name="b_93f8f62161d6fac936d34784e_0fc8d63267" tabIndex="-1" defaultValue="" />
+                        </div>
+                        <div className="clear">
+                          <input disabled={!this.state.EMAIL} type="submit" defaultValue="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="btn btn-look" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  {/* <!--End mc_embed_signup--> */}
+
+                  </div>
+                  {/* <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" className="btn btn-primary">Save changes</button>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+
       </div>
     );
   }
