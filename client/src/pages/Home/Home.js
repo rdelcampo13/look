@@ -162,11 +162,13 @@ class App extends Component {
     return (
       <div>
         <div className="header">
-          <Canvas />
-          <div className="header-container text-center">
-            {/* <h1 className="header-title">look.<span className="header-title-ar">ar</span></h1> */}
-            {/* <h3 className="header-subtitle">We're turning augmented reality into a scientific tool</h3> */}
 
+          <Canvas />
+
+          <div className="header-container text-center">
+            <img className="header-img" src="/img/look-overlay.png" />
+            <h3 className="header-subtitle header-mobile-title">an augmented scientist approaches...</h3>
+            {/* <h1 className="header-title">look.<span className="header-title-ar">ar</span></h1> */}
             {/* <!-- Button trigger modal --> */}
             {/* <button type="button" className="btn btn-look" data-toggle="modal" data-target="#mc-modal">
               Sign up for updates
@@ -174,50 +176,67 @@ class App extends Component {
           </div>
         </div>
 
-            {/* <!-- Modal --> */}
-            <div className="modal fade" id="mc-modal" tabIndex="-1" role="dialog">
-              <div className="modal-dialog modal-dialog-centered" role="document">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalCenterTitle">Sign up for our mailing list</h5>
-                    <button type="button" className="close" data-dismiss="modal">
-                      <span>&times;</span>
-                    </button>
-                  </div>
-                  <div className="modal-body">
-                  <img className="message" src="/img/message.png" />
-                  {/* <!-- Begin Mailchimp Signup Form --> */}
-                  <div id="mc_embed_signup">
-                    <form action="https://app.us19.list-manage.com/subscribe/post?u=93f8f62161d6fac936d34784e&amp;id=0fc8d63267" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-                      <div id="mc_embed_signup_scroll">
-                      <p style={{ fontSize: 14 }}>Enter your email address to get updates on the project</p>
-                        <div className="mc-field-group">
-                          <input type="email" defaultValue="" placeholder="Your Email" name="EMAIL" className="required email" id="mce-EMAIL"  onChange={this.handleInputChange} />
-                        </div>
-                        <div id="mce-responses" className="clear">
-                          <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
-                          <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
-                        </div>    
-                        {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
-                        <div style={{ position: "absolute", left: -5000 }}>
-                          <input type="text" name="b_93f8f62161d6fac936d34784e_0fc8d63267" tabIndex="-1" defaultValue="" />
-                        </div>
-                        <div className="clear">
-                          <input disabled={!this.state.EMAIL} type="submit" defaultValue="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="btn btn-look" />
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  {/* <!--End mc_embed_signup--> */}
+        <h3 className="header-subtitle header-corner">an augmented scientist approaches...</h3>
+        <button type="button" class="scroll_down" id="scroll_down"></button>
 
-                  </div>
-                  {/* <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-primary">Save changes</button>
-                  </div> */}
-                </div>
+        <div>
+          <div class="container">
+          <div class="row">
+            <div class="col">
+              <div className="content-container text-center">
+                <h1 style={{ color: "#fff" }}>agumented reality</h1>
+                <h1 style={{ color: "#fff" }}>=</h1>
+                <h1 style={{ color: "#fff" }}>scientifc tool</h1>                
               </div>
             </div>
+          </div>            
+          </div>          
+        </div>
+
+        {/* <!-- Modal --> */}
+        <div className="modal fade" id="mc-modal" tabIndex="-1" role="dialog">
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalCenterTitle">Sign up for our mailing list</h5>
+                <button type="button" className="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+              <img className="message" src="/img/message.png" />
+              {/* <!-- Begin Mailchimp Signup Form --> */}
+              <div id="mc_embed_signup">
+                <form action="https://app.us19.list-manage.com/subscribe/post?u=93f8f62161d6fac936d34784e&amp;id=0fc8d63267" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                  <div id="mc_embed_signup_scroll">
+                  <p style={{ fontSize: 14 }}>Enter your email address to get updates on the project</p>
+                    <div className="mc-field-group">
+                      <input type="email" defaultValue="" placeholder="Your Email" name="EMAIL" className="required email" id="mce-EMAIL"  onChange={this.handleInputChange} />
+                    </div>
+                    <div id="mce-responses" className="clear">
+                      <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
+                      <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
+                    </div>    
+                    {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
+                    <div style={{ position: "absolute", left: -5000 }}>
+                      <input type="text" name="b_93f8f62161d6fac936d34784e_0fc8d63267" tabIndex="-1" defaultValue="" />
+                    </div>
+                    <div className="clear">
+                      <input disabled={!this.state.EMAIL} type="submit" defaultValue="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="btn btn-look" />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              {/* <!--End mc_embed_signup--> */}
+
+              </div>
+              {/* <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Save changes</button>
+              </div> */}
+            </div>
+          </div>
+        </div>
 
       </div>
     );
