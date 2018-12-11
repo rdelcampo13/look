@@ -166,8 +166,7 @@ class App extends Component {
           <Canvas />
 
           <div className="header-container text-center">
-            <img className="header-img" src="/img/look-overlay.png" />
-            <h3 className="header-subtitle header-mobile-title">an augmented scientist approaches...</h3>
+            {/* <h3 className="header-subtitle header-mobile-title">an augmented scientist approaches...</h3> */}
             {/* <h1 className="header-title">look.<span className="header-title-ar">ar</span></h1> */}
             {/* <!-- Button trigger modal --> */}
             {/* <button type="button" className="btn btn-look" data-toggle="modal" data-target="#mc-modal">
@@ -176,21 +175,47 @@ class App extends Component {
           </div>
         </div>
 
-        <h3 className="header-subtitle header-corner">an augmented scientist approaches...</h3>
-        <button type="button" class="scroll_down" id="scroll_down"></button>
+        <h3 className="header-subtitle header-corner text-center  ">an augmented scientist approaches...</h3>
+        <a className="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
 
-        <div>
-          <div class="container">
-          <div class="row">
-            <div class="col">
-              <div className="content-container text-center">
-                <h1 style={{ color: "#fff" }}>agumented reality</h1>
-                <h1 style={{ color: "#fff" }}>=</h1>
-                <h1 style={{ color: "#fff" }}>scientifc tool</h1>                
-              </div>
+        <div className="demo">
+          <div className="container demo-cont">
+
+            <div className="content-container text-center ar-header">
+              <h3 style={{ color: "#fff", fontFamily: "Rubik" }}>agumented reality</h3>
+              <h3 style={{ color: "#fff", fontFamily: "Rubik" }}>=</h3>
+              <h3 style={{ color: "#fff", fontFamily: "Rubik" }}>scientifc tool</h3> 
             </div>
-          </div>            
+
+            <div className="row">
+              <div className="col-md gif top-left">
+                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>pick your tool</h3>
+                <img src="/img/clip1.gif" />
+              </div>
+              <div className="col-md gif top-right">
+                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>place on target</h3>
+                <img src="/img/clip2.gif" />
+              </div>
+            </div>        
+
+            <div className="row">
+              <div className="col-md gif bottom-left">
+                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>scan the object</h3>
+                <img src="/img/clip3.gif" />
+              </div>
+              <div className="col-md gif bottom-right">
+                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>capture data</h3>
+                <img src="/img/clip4.gif" />
+              </div>
+            </div>    
+
           </div>          
+        </div>
+
+        <div className="footer">
+          <div className="container">
+            <img className="footer-logo" src="/img/look-box-logo.png" />
+          </div>
         </div>
 
         {/* <!-- Modal --> */}
