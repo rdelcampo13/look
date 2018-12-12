@@ -240,6 +240,10 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
     margin-top: 30px;  
   }
 
+  .gif-header-mobile {
+    display: none;
+  }
+
   .gif.top-left {
     padding-bottom: 10%;
     padding-right: 15%;
@@ -262,7 +266,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   }
 
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 767px) {
     .ar-header {
       position: inherit;
       margin-left: auto;
@@ -275,12 +279,19 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
     .ar-header > h3 {
       font-weight: 700;
       font-size: 2rem;
-    }    
+    }
+    .gif-header-mobile {
+      display: block;
+    }
+    .gif-header-bottom {
+      display: none;
+    }     
     .gif.top-left,
     .gif.top-right,
     .gif.bottom-left,
     .gif.bottom-right   {
       padding: 0px 40px;
+      padding-bottom: 20px;
     }
   }
 

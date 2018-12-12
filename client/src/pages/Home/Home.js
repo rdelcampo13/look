@@ -200,12 +200,14 @@ class App extends Component {
 
             <div className="row">
               <div className="col-md gif bottom-left">
+                <h3 className="gif-header gif-header-top gif-header-mobile text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>pick your tool</h3>
                 <img src="/img/clip3.gif" />
-                <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>scan the object</h3>
+                <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>pick your tool</h3>
               </div>
               <div className="col-md gif bottom-right">
+                <h3 className="gif-header gif-header-top gif-header-mobile text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>place on target</h3>
                 <img src="/img/clip4.gif" />
-                <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>capture data</h3>
+                <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>place on target</h3>
               </div>
             </div>    
 
