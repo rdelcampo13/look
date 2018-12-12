@@ -9,6 +9,7 @@ class App extends Component {
     EMAIL: '',
     width: '',
     height: '',
+    scroll: '',
   };
 
   handleInputChange = event => {
@@ -17,6 +18,11 @@ class App extends Component {
       [name]: value
     });
   };
+
+  handleScroll = (event) => {
+    let scrollTop = window.scrollY;
+    this.setState({ scroll: scrollTop })
+  }
 
   updateCanvas = () => {
     var canvas = document.querySelector('canvas'),
@@ -148,19 +154,52 @@ class App extends Component {
 
   componentDidMount() {
     this.canvasDots();
+    window.addEventListener('scroll', this.handleScroll);
     window.addEventListener("resize", this.updateCanvas);
   }
   
   componentWillUnmount = () => {
+    window.addEventListener('scroll', this.handleScroll);
     window.removeEventListener("resize", this.updateCanvas);
   }  
 
 
   // Render Function
   render() {
+    var navDisplay = this.state.scroll < 50 ? 'd-none' : 'fade-in';
 
     return (
       <div>
+
+        <div className={navDisplay}>
+          <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: "#000000" }}>
+            <div className="container">
+
+              <a class="navbar-brand" >
+                <img src="/img/look-box-logo.png" width="auto" height="30" alt="" />
+              </a>
+
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav ml-auto">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">Team</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/docs/Look_Whitepaper.pdf" target="_Blank">Whitepaper</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#" data-toggle="modal" data-target="#mc-modal" >Stay Updated</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+
         <div className="header">
 
           <Canvas />
@@ -182,9 +221,9 @@ class App extends Component {
           <div className="container demo-cont">
 
             <div className="content-container text-center ar-header">
-              <h2 style={{ color: "#fff", fontFamily: "Montserrat" }}>agumented reality</h2>
+              <h2 style={{ color: "#fff", fontFamily: "Montserrat" }}>augmented reality</h2>
               <h2 style={{ color: "#fff", fontFamily: "Montserrat" }}>=</h2>
-              <h2 style={{ color: "#fff", fontFamily: "Montserrat" }}>scientifc tool</h2> 
+              <h2 style={{ color: "#fff", fontFamily: "Montserrat" }}>scientific tool</h2> 
             </div>
 
             <div className="row">
