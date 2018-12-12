@@ -49,7 +49,7 @@ class App extends Component {
     };
 
     var dots = {
-        nb: ((window.innerWidth > 900) ? 90 : 20),
+        nb: ((window.innerWidth > 900) ? 15 : 15),
         distance: 90,
         d_radius: 100,
         array: []
@@ -182,30 +182,30 @@ class App extends Component {
           <div className="container demo-cont">
 
             <div className="content-container text-center ar-header">
-              <h3 style={{ color: "#fff", fontFamily: "Rubik" }}>agumented reality</h3>
-              <h3 style={{ color: "#fff", fontFamily: "Rubik" }}>=</h3>
-              <h3 style={{ color: "#fff", fontFamily: "Rubik" }}>scientifc tool</h3> 
+              <h2 style={{ color: "#fff", fontFamily: "Lato" }}>agumented reality</h2>
+              <h2 style={{ color: "#fff", fontFamily: "Lato" }}>=</h2>
+              <h2 style={{ color: "#fff", fontFamily: "Lato" }}>scientifc tool</h2> 
             </div>
 
             <div className="row">
               <div className="col-md gif top-left">
-                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>pick your tool</h3>
+                <h3 className="gif-header gif-header-top text-center" style={{ color: "#fff", fontFamily: "Lato" }}>pick your tool</h3>
                 <img src="/img/clip1.gif" />
               </div>
               <div className="col-md gif top-right">
-                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>place on target</h3>
+                <h3 className="gif-header gif-header-top text-center" style={{ color: "#fff", fontFamily: "Lato" }}>place on target</h3>
                 <img src="/img/clip2.gif" />
               </div>
             </div>        
 
             <div className="row">
               <div className="col-md gif bottom-left">
-                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>scan the object</h3>
                 <img src="/img/clip3.gif" />
+                <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Lato" }}>scan the object</h3>
               </div>
               <div className="col-md gif bottom-right">
-                <h3 className="gif-header text-center" style={{ color: "#fff", fontFamily: "Rubik" }}>capture data</h3>
                 <img src="/img/clip4.gif" />
+                <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Lato" }}>capture data</h3>
               </div>
             </div>    
 
