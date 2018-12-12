@@ -306,7 +306,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   }
 
   .footer-logo {
-    height: 40px;
+    height: 30px;
     width: auto;
     display: block;
     margin: 20px auto;
@@ -319,6 +319,14 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
     animation-timing-function: ease-in;
     animation-duration: 0.5s;
   }
+
+  .fade-out {
+    opacity: 0;
+    animation-name: fadeOutOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+  }
   
   @keyframes fadeInOpacity {
     0% {
@@ -326,5 +334,14 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @keyframes fadeOutOpacity {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }

@@ -9,7 +9,9 @@ class App extends Component {
     EMAIL: '',
     width: '',
     height: '',
-    scroll: '',
+    scroll: 0,
+    alreadyFadedIn: false,
+    navClass: 'd-none'
   };
 
   handleInputChange = event => {
@@ -20,8 +22,16 @@ class App extends Component {
   };
 
   handleScroll = (event) => {
+    console.log(event)
     let scrollTop = window.scrollY;
-    this.setState({ scroll: scrollTop })
+  
+    this.setState({ scroll: scrollTop });
+    let navClass;
+
+    if (this.state.scroll >= 50) {navClass = 'fade-in'}
+    if (this.state.scroll < 50) {navClass = 'd-none'}
+
+    this.setState({ navClass });
   }
 
   updateCanvas = () => {
@@ -166,16 +176,15 @@ class App extends Component {
 
   // Render Function
   render() {
-    var navDisplay = this.state.scroll < 50 ? 'd-none' : 'fade-in';
 
     return (
       <div>
 
-        <div className={navDisplay}>
+        <div className={this.state.navClass}>
           <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: "#000000" }}>
             <div className="container">
 
-              <a class="navbar-brand" >
+              <a className="navbar-brand" >
                 <img src="/img/look-box-logo.png" width="auto" height="30" alt="" />
               </a>
 
@@ -187,12 +196,9 @@ class App extends Component {
                 <li className="nav-item">
                     <a className="nav-link" href="/docs/Look_Whitepaper.pdf" target="_Blank">Whitepaper</a>
                   </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">Making</a>
-                  </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a className="nav-link" href="#" data-toggle="modal" data-target="#mc-modal" >Subscribe</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
