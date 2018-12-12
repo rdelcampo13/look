@@ -184,14 +184,14 @@ class App extends Component {
               </button>
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">Team</a>
-                  </li>
-                  <li className="nav-item">
+                <li className="nav-item">
                     <a className="nav-link" href="/docs/Look_Whitepaper.pdf" target="_Blank">Whitepaper</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" data-toggle="modal" data-target="#mc-modal" >Stay Updated</a>
+                    <a className="nav-link" href="#">Making</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#" data-toggle="modal" data-target="#mc-modal" >Subscribe</a>
                   </li>
                 </ul>
               </div>
