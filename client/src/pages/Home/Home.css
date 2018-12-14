@@ -23,7 +23,7 @@ background-repeat: no-repeat;
 .ca3-scroll-down-link {
 cursor:pointer;
 height: 60px;
-width: 80px;
+width: 60px;
 margin: 0px 0 0 -40px;
 line-height: 60px;
 position: absolute;
@@ -136,7 +136,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 100%;
 }
 
 .btn-look {
@@ -144,14 +144,6 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   color: #fff;
 }
 
-.modal-header {
-  padding: 1rem 2rem;
-}
-
-.modal-body {
-  padding: 0 2rem;
-  padding-bottom: 2rem;
-}
 
 .modal-backdrop {
   z-index: -1;
@@ -230,6 +222,10 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
     background-color: transparent;
   }
 
+  .ar-header > h2 {
+    font-size: 1.99rem;
+  }
+
   .gif-header {
     padding: 10px 0px;
   }
@@ -302,7 +298,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
 
   .footer {
     background-color: #000000;
-    border-top: 0.5px solid rgba(255, 255, 255, .2);
+    /* border-top: 0.5px solid rgba(255, 255, 255, .2); */
   }
 
   .footer-logo {
