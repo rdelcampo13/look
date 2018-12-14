@@ -278,7 +278,7 @@ class App extends Component {
                 </button>
               </div>
               <div className="modal-body">
-                <p>look.science@gmail.com</p>
+                <a href="mailto:look.science@gmail.com<" style={{ color: "#fff" }}>look.science@gmail.com</a>
               </div>
             </div>
           </div>
