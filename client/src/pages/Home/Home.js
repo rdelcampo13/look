@@ -193,7 +193,7 @@ class App extends Component {
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Demo</a>
+                    <a className="nav-link" target="_blank" href="https://vimeo.com/user92801704">Demo</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="/docs/Look_Whitepaper.pdf" target="_Blank">Whitepaper</a>
@@ -272,13 +272,13 @@ class App extends Component {
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalCenterTitle">Sign up for our mailing list</h5>
+                <h5 className="modal-title" id="exampleModalCenterTitle">Contact Us</h5>
                 <button type="button" className="close" data-dismiss="modal">
                   <span>&times;</span>
                 </button>
               </div>
               <div className="modal-body">
-                <p>Modal body text goes here.</p>
+                <p>look.science@gmail.com</p>
               </div>
             </div>
           </div>
