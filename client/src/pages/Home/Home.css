@@ -10,6 +10,17 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   content: attr(data-ca3_icon);
 }
 
+.fullscreen {
+  max-height: 100vh;
+  width: auto;
+}
+
+.navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 0px;
+}
+
 .nav-item {
   padding: 0px 8px;
 }
@@ -217,13 +228,19 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
 
   .demo {
     background-color: #000000;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    height: calc(100vh - 70px - 56px);
+    /* padding-top: 100px; */
+    /* padding-bottom: 50px; */
   }
 
   .demo-cont {
     position: relative;
     width: 100%;
+    height: calc(100vh - 70px - 56px);
+  }
+
+  .demo-cont > .row {
+    height: calc((100vh - 70px - 56px)/2);
   }
 
   .ar-header {
@@ -260,25 +277,35 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
     display: none;
   }
 
+  .gif {
+    width: 50%;
+    padding: 0 13%;
+  }
+
   .gif.top-left {
-    padding-bottom: 10%;
-    padding-right: 15%;
+    padding-bottom: 30px;
+    /* padding-right: 0%; */
   }
   .gif.top-right {
-    padding-bottom: 10%;
-    padding-left: 15%;
+    padding-bottom: 30px;
+    /* padding-left: 0%; */
   }
   .gif.bottom-left {
-    padding-top: 10%;
-    padding-right: 15%;
+    padding-top: 30px;
+    /* padding-right: 0%; */
   }
   .gif.bottom-right {
-    padding-top: 10%;
-    padding-left: 15%;
+    padding-top: 30px;
+    /* padding-left: 0%; */
   }
 
   .gif > img {
-    width: 100%;
+    /* width: auto; */
+    height: calc(100% - 84px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
   }
 
 
@@ -315,13 +342,14 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   .footer {
     background-color: #000000;
     /* border-top: 0.5px solid rgba(255, 255, 255, .2); */
+    margin: 20px auto;
   }
 
   .footer-logo {
     height: 30px;
     width: auto;
     display: block;
-    margin: 20px auto;
+    margin: 0px auto;
   }
 
   .fade-in {
