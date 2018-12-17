@@ -210,7 +210,7 @@ class App extends Component {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                      <a className="nav-link" target="_blank" href="https://vimeo.com/user92801704">Demo</a>
+                      <a className="nav-link" target="_blank" href="https://vimeo.com/lookscience">Demo</a>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link" href="/docs/Look_Whitepaper.pdf" target="_Blank">Whitepaper</a>
@@ -235,23 +235,23 @@ class App extends Component {
               <div className="row">
                 <div className="col-md gif top-left">
                   <h3 className="gif-header gif-header-top text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>Pick Your Tool</h3>
-                  <img src="/img/clip1.gif" />
+                  <img src="/img/fade1.gif" />
                 </div>
                 <div className="col-md gif top-right">
                   <h3 className="gif-header gif-header-top text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>Place on Target</h3>
-                  <img src="/img/clip2.gif" />
+                  <img src="/img/fade2.gif" />
                 </div>
               </div>        
 
               <div className="row">
                 <div className="col-md gif bottom-left">
                   <h3 className="gif-header gif-header-top gif-header-mobile text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>Scan Target</h3>
-                  <img src="/img/clip3.gif" />
+                  <img src="/img/fade3.gif" />
                   <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>Scan Target</h3>
                 </div>
                 <div className="col-md gif bottom-right">
                   <h3 className="gif-header gif-header-top gif-header-mobile text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>Analyze Results</h3>
-                  <img src="/img/clip4.gif" />
+                  <img src="/img/fade4.gif" />
                   <h3 className="gif-header gif-header-bottom text-center" style={{ color: "#fff", fontFamily: "Montserrat" }}>Analyze Results</h3>
                 </div>
               </div>    
@@ -261,7 +261,12 @@ class App extends Component {
 
           <div className="footer">
             <div className="container-fluid">
-              <img className="footer-logo" src="/img/look-box-logo.png" />
+            <div className="row">
+                <img className="footer-logo" src="/img/look-box-logo.png" />
+              </div>
+              <div className="row">
+                <p className="footer-text text-center">your quantitative sixth sense</p>
+              </div>
             </div>
           </div>
         </div>

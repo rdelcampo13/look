@@ -72,7 +72,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
 
 
 .header-canvas {
-  background: url("/img/look-fade.jpg") no-repeat center center;
+  background: url("/img/look-fade-top.jpg") no-repeat center center;
   background-size: contain;
   background-color: #000000;
   width:100%;
@@ -83,6 +83,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   position: relative;
   width: 100%;
   display: flex;
+  margin-bottom: 200px;
 }
 
 .header-img {
@@ -99,7 +100,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   width: 70%;
 }
 
-.header-corner {
+.header-subtitle {
   display: block;
   position: absolute;
   margin-left: auto;
@@ -112,6 +113,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  font-weight: 200;
 }
 
 
@@ -228,7 +230,7 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
 
   .demo {
     background-color: #000000;
-    height: calc(100vh - 70px - 56px);
+    height: calc(100vh - 68px - 56px);
     /* padding-top: 100px; */
     /* padding-bottom: 50px; */
   }
@@ -236,11 +238,11 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   .demo-cont {
     position: relative;
     width: 100%;
-    height: calc(100vh - 70px - 56px);
+    height: calc(100vh - 68px - 56px);
   }
 
   .demo-cont > .row {
-    height: calc((100vh - 70px - 56px)/2);
+    height: calc((100vh - 68px - 56px)/2);
   }
 
   .ar-header {
@@ -257,20 +259,25 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
 
   .ar-header > h2 {
     font-size: 1.99rem;
+    font-weight: 400;
+    color: #a9a9a9 !important;
   }
 
   .gif-header {
     padding: 10px 0px;
+    font-weight: 200;
   }
 
   .gif-header-top {
-    border-bottom: 1px solid rgba(255, 255, 255, .5); 
-    margin-bottom: 30px;  
+    border-bottom: 1px solid rgba(255, 255, 255, .4); 
+    margin-bottom: 10px;  
+    margin-top: 0px;  
   }
 
   .gif-header-bottom {
-    border-top: 1px solid rgba(255, 255, 255, .5);
-    margin-top: 30px;  
+    border-top: 1px solid rgba(255, 255, 255, .4);
+    margin-top: 10px;  
+    margin-bottom: 0px;  
   }
 
   .gif-header-mobile {
@@ -283,19 +290,19 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   }
 
   .gif.top-left {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     /* padding-right: 0%; */
   }
   .gif.top-right {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     /* padding-left: 0%; */
   }
   .gif.bottom-left {
-    padding-top: 30px;
+    padding-top: 15px;
     /* padding-right: 0%; */
   }
   .gif.bottom-right {
-    padding-top: 30px;
+    padding-top: 15px;
     /* padding-left: 0%; */
   }
 
@@ -342,7 +349,8 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   .footer {
     background-color: #000000;
     /* border-top: 0.5px solid rgba(255, 255, 255, .2); */
-    margin: 20px auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
 
   .footer-logo {
@@ -350,7 +358,17 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
     width: auto;
     display: block;
     margin: 0px auto;
-  }
+  } 
+
+  .footer-text {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    color: #fff;
+    font-size: 0.75em;
+    margin: 0px
+  } 
 
   .fade-in {
     opacity: 1;
