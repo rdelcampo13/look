@@ -179,6 +179,34 @@ class App extends Component {
     return (
       <div>
 
+        <div className={this.state.navClass}>
+          <nav className="navbar navbar-expand-lg navbar-dark fixed-top mobile-nav" style={{ backgroundColor: "#000000" }}>
+              {/* <div className="container"> */}
+
+                <a className="navbar-brand" >
+                  <img src="/img/look-box-logo.png" width="auto" height="30" alt="" />
+                </a>
+
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul className="navbar-nav ml-auto">
+                    <li className="nav-item">
+                      <a className="nav-link" target="_blank" href="https://vimeo.com/lookscience">Demo</a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="/docs/Look_Whitepaper.pdf" target="_Blank">Whitepaper</a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#" data-toggle="modal" data-target="#mc-modal" >Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              {/* </div> */}
+            </nav>
+        </div>
+
         <div className="header">
 
           <Canvas />

@@ -15,6 +15,10 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   width: auto;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .navbar-brand {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -313,6 +317,9 @@ animation:         ca3_fade_move_down 2s ease-in-out infinite;
   }
 
   @media screen and (max-width: 992px) {
+    .mobile-nav {
+      display: flex;
+    }
     .header {
       margin-bottom: 100px;
     }
